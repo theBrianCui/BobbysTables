@@ -18,4 +18,6 @@ function &get_db_connection() {
 
     return $conn;
 }
+
+$conn = get_db_connection();
 ?>

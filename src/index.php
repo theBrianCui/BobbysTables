@@ -1,14 +1,7 @@
 <?php
-
-session_start();
-
-include_once __DIR__ . '/login.php';
-
-require_once __DIR__ . '/db.php';
-
+require_once __DIR__ . './header.php';
 
 $conn = get_db_connection();
-
 if (isset($_POST['productSubmitted']) && $_SESSION['user']) {
     $statement = $conn->prepare("INSERT INTO products (owner, name, price)
                                  VALUES (:owner, :name, :price)");
@@ -18,12 +11,6 @@ if (isset($_POST['productSubmitted']) && $_SESSION['user']) {
 }
 
 ?>
-
-<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-
-<h1>Craig's Lists</h1>
-<h2>The more you pay, the more you lose!</h2>
 
 <table>
     <tr>
