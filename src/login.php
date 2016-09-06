@@ -1,11 +1,16 @@
 <?php
 
-if ($_POST['user']) {
+if (isset($_POST['user'])) {
     $_SESSION['user'] = $_POST['user'];
 }
 
 if (isset($_GET['logout'])) {
-    unset($_SESSION['user']);
+    session_unset();
+    session_destroy();
+    session_start();
+    session_regenerate_id(true);
+    $_SESSION = array();
+    echo "You are logged out.";
 }
 
 ?>

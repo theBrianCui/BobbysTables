@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS `products`;
 
 CREATE TABLE `products` (
     	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-		`owner` varchar(36) NOT NULL,
+		  `owner` varchar(36) NOT NULL,
     	`name` varchar(1024) NOT NULL,
     	`price` int(10) unsigned NOT NULL DEFAULT 0,
     	PRIMARY KEY (`id`)
