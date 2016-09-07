@@ -30,7 +30,8 @@ if (isset($_GET['logout'])) {
         ?>
         Please login to make a purchase.
         <form id="login" action="index.php" method="post">
-            <input type="text" placeholder="Username" name="user"/>
+            <input type="text" placeholder="Username" name="user"/><br/>
+            <button type="submit">Login</button>
         </form>
         <?php
     }
