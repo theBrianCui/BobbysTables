@@ -30,17 +30,17 @@ if (isset($result['name'])) {
     ?>
 
     <h2>Checkout Successful</h2>
-    <p><?= $product_name ?> : PRICE: <?= $product_price ?></p>
+    <p><?= safe($product_name) ?>: PRICE: <?= safe($product_price) ?></p>
     <p>
         Order details:
     </p>
     <ul>
-        <li>Name: <?= $_SESSION['user'] ?></li>
-        <li>Address: <?= $_POST['address'] ?></li>
-        <li>Credit Card: <?= $_POST['cc'] ?></li>
-        <li>Product ID: <?= $_POST['productid'] ?></li>
+        <li>Name: <?= safe($_SESSION['user']) ?></li>
+        <li>Address: <?= safe($_POST['address']) ?></li>
+        <li>Credit Card: <?= safe($_POST['cc']) ?></li>
+        <li>Product ID: <?= safe($_POST['productid']) ?></li>
     </ul>
-    <h2>Charged to card: $<?= $product_price ?></h2>
+    <h2>Charged to card: $<?= safe($product_price) ?></h2>
     <p>Thank you for using Bobby's Tables!</p>
     <p><a href="./index.php">Return to the Marketplace</a></p>
 

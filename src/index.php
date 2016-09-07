@@ -41,22 +41,22 @@ foreach ($conn->query("SELECT * FROM products") as $product) {
     ?>
     <tr>
         <td>
-            <?= $product['id'] ?>
+            <?= safe($product['id']) ?>
         </td>
         <td>
-            <?= $product['owner'] ?>
+            <?= safe($product['owner']) ?>
         </td>
         <td>
-            <?= $product['name'] ?>
+            <?= safe($product['name']) ?>
         </td>
         <td>
-            <?= $product['price'] ?>
+            <?= safe($product['price']) ?>
         </td>
         <?php
         if (user_logged_in()) {
         ?>
             <td>
-                <a href="buy.php?id=<?= $product['id'] ?>">BUY NOW</a>
+                <a href="buy.php?id=<?= safe($product['id']) ?>">BUY NOW</a>
             </td>
         <?php } ?>
     </tr>

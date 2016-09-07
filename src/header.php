@@ -1,8 +1,18 @@
 <?php
 session_start();
 
+require_once __DIR__ . './config.php';
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/login.php';
+
+function safe($string) {
+    global $VULNERABLE;
+    if (!$VULNERABLE['xss']) {
+        return trim(htmlspecialchars($string));
+    } else {
+        return $string;
+    }
+}
 
 ?>
 
