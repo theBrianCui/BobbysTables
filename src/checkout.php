@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . './header.php';
+require_once __DIR__ . '/./header.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo "Invalid request method: " . $_SERVER['REQUEST_METHOD'];
@@ -49,4 +49,4 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     }
 }
 
-require_once __DIR__ . './footer.php';
+require_once __DIR__ . '/./footer.php';

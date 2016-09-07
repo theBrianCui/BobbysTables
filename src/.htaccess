@@ -5,3 +5,7 @@ FileETag None
     Header set Pragma "no-cache"
     Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
 </ifModule>
+
+<FilesMatch "^(header|footer|db|login|config)\.php$">
+Require all denied
+</FilesMatch>
