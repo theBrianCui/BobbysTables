@@ -21,6 +21,7 @@ function safe($string) {
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<div id="appwrapper">
 <h1>Bobby's Tables</h1>
 <h2>The World's #1 Online Marketplace</h2>
 <?php require_once __DIR__ . '/login.php'; ?>

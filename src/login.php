@@ -18,7 +18,7 @@ if (isset($_GET['logout'])) {
 }
 
 ?>
-<div style="float: right">
+<div id="loginbox">
     <?php
 
     if ($_SESSION['user']) {
