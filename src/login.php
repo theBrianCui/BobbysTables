@@ -1,5 +1,9 @@
 <?php
 
+function user_logged_in() {
+    return isset($_SESSION['user']);
+}
+
 if (isset($_POST['user'])) {
     $_SESSION['user'] = $_POST['user'];
 }

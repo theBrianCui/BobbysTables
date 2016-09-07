@@ -26,9 +26,13 @@ if (isset($_POST['productSubmitted']) && $_SESSION['user']) {
         <th>
             Price
         </th>
+        <?php
+        if (user_logged_in()) {
+        ?>
         <th>
             Checkout
         </th>
+        <?php } ?>
     </tr>
 <?php
 
@@ -48,9 +52,13 @@ foreach ($conn->query("SELECT * FROM products") as $product) {
         <td>
             <?= $product['price'] ?>
         </td>
-        <td>
-            <a href="buy.php?id=<?= $product['id'] ?>">BUY NOW</a>
-        </td>
+        <?php
+        if (user_logged_in()) {
+        ?>
+            <td>
+                <a href="buy.php?id=<?= $product['id'] ?>">BUY NOW</a>
+            </td>
+        <?php } ?>
     </tr>
     <?php
 }

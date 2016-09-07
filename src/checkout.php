@@ -3,6 +3,13 @@ require_once __DIR__ . './header.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo "Invalid request method: " . $_SERVER['REQUEST_METHOD'];
+    http_response_code(400);
+    die();
+}
+
+if (!user_logged_in()) {
+    echo "You are not logged in. You cannot make a purchase!";
+    http_response_code(400);
     die();
 }
 
@@ -32,5 +39,6 @@ if (isset($result['name'])) {
 
 } else {
     echo 'Invalid product purchase (No product found with id ' . $ID . ')';
+    http_response_code(500);
     die();
 }
