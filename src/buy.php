@@ -17,7 +17,7 @@ if (!user_logged_in()) {
     ?>
 
     <h2>Your Shopping Cart</h2>
-    <p><?= safe($product_name) ?>: PRICE: <?= safe($product_price) ?></p>
+    <p><?= $product_name ?>: PRICE: <?= safe($product_price) ?></p>
     <p></p>
     <h2>Your Total: <?= safe($product_price) ?></h2>
     <p>Checkout Now</p>
